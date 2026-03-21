@@ -1,6 +1,8 @@
 import type { Startup, User, AnalysisResult, TeamSkillHeatmap, SkillData, Skill } from '../types';
 
-const BASE_URL = 'http://localhost:8080/api';
+//const BASE_URL = 'http://localhost:8080/api';
+const BASE_URL = 'jumpstart-production-5b20.up.railway.app';
+
 
 function authHeaders(): HeadersInit {
   const token = localStorage.getItem('jwt');
