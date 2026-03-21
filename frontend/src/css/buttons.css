@@ -1,0 +1,25 @@
+.ghost-button {
+}
+.primary-button {
+  all: unset;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 75px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  color: #000000;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}

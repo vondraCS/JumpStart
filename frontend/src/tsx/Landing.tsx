@@ -3,10 +3,16 @@
 import '../css/landing.css'
 import '../css/index.css'
 
+import { PrimaryBtn } from './components/buttons'
+
 function LandingPage() {
 
   return (
-    <div>teststtt</div>
+    <div>teststtt      
+      <PrimaryBtn clickFunction = ()=>{console.log("ran")} text = "test" buttonStylingClass='.primary-button'/>
+
+      </div>
+    
   )
 }
 
