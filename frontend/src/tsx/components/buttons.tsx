@@ -1,23 +1,25 @@
+import React from 'react';
+import '../../css/components.css';
 
-
-interface Button {
-  clickFunction: ()=>{};
-  text?: string;
-  img?: string;
-  altText?: string;
-  buttonStylingClass: string;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  fullWidth?: boolean;
 }
 
-export function PrimaryBtn({clickFunction, text, buttonStylingClass}: Button){
-    return(
-        <button className={buttonStylingClass} onClick={clickFunction}>{text} 
-        </button>
-    )
-}
-
-export function IconBtn({clickFunction, img, altText, buttonStylingClass}: Button){
-    return(
-        <button className={buttonStylingClass} onClick={clickFunction}><img src={img} alt={altText} /> 
-        </button>
-    )
-}
+export const Button: React.FC<ButtonProps> = ({ 
+  children, 
+  variant = 'primary', 
+  size = 'md', 
+  fullWidth = false, 
+  className = '', 
+  ...props 
+}) => {
+  const btnClass = `btn btn-${variant} btn-${size} ${fullWidth ? 'btn-full' : ''} ${className}`;
+  
+  return (
+    <button className={btnClass.trim()} {...props}>
+      {children}
+    </button>
+  );
+};
