@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import '../css/landing.css';
 import { Button } from './components/buttons';
 import { Card } from './components/cards';
+import OrgChartBackground from './components/OrgChartBackground';
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ export default function LandingPage() {
     <div className="landing-container">
       {/* Hero */}
       <section className="hero-section">
+        <OrgChartBackground />
         <div className="hero-content">
           <h1 className="hero-title">Bringing your ideas from 0 to 1</h1>
           <p className="hero-subtitle">
